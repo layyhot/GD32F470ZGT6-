@@ -1,0 +1,16 @@
+#include "gd32f4xx.h"
+
+
+#define TRCT5000_RCU_GPIOx_1  RCU_GPIOA //PA15 
+#define TRCT5000_RCU_GPIOx_2  RCU_GPIOB //PC10. 12
+#define TRCT5000_RCU_GPIOx_3  RCU_GPIOC //PB15. 13 
+#define TRCT5000_PORT_1  GPIOA
+#define TRCT5000_PORT_2  GPIOB
+#define TRCT5000_PORT_3  GPIOC
+
+#define TRCT5000_PIN_x_1 GPIO_PIN_15
+#define TRCT5000_PIN_x_2 GPIO_PIN_10 | GPIO_PIN_12
+#define TRCT5000_PIN_x_3 GPIO_PIN_13 | GPIO_PIN_15
+
+void Tracking_Init(void);
+
