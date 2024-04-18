@@ -1,0 +1,9 @@
+.\object\usbh_hid_usr.o: ..\src\usbh_hid_usr.c
+.\object\usbh_hid_usr.o: ..\inc\usbh_hid_usr.h
+.\object\usbh_hid_usr.o: E:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\object\usbh_hid_usr.o: ..\..\..\..\..\Firmware\GD32F4xx_usb_library\host\core\Include\usbh_core.h
+.\object\usbh_hid_usr.o: ..\inc\usbh_conf.h
+.\object\usbh_hid_usr.o: ..\..\..\..\..\Firmware\GD32F4xx_usb_library\driver\Include\drv_usb_host.h
+.\object\usbh_hid_usr.o: ..\..\..\..\..\Firmware\GD32F4xx_usb_library\driver\Include\drv_usb_regs.h
+.\object\usbh_hid_usr.o: ..\inc\usb_conf.h
+.\object\usbh_hid_usr.o: ..\..\..\..\..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h
