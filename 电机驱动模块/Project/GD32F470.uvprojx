@@ -466,33 +466,6 @@
         </Group>
         <Group>
           <GroupName>Utilities</GroupName>
-          <Files>
-            <File>
-              <FileName>gd32f450i_eval.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Utilities\gd32f450i_eval.c</FilePath>
-            </File>
-            <File>
-              <FileName>gd32f450i_eval_exmc_sdram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Utilities\gd32f450i_eval_exmc_sdram.c</FilePath>
-            </File>
-            <File>
-              <FileName>gd32f450i_lcd_eval.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Utilities\gd32f450i_lcd_eval.c</FilePath>
-            </File>
-            <File>
-              <FileName>gd32f450z_eval.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Utilities\gd32f450z_eval.c</FilePath>
-            </File>
-            <File>
-              <FileName>lcd_font.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Utilities\lcd_font.c</FilePath>
-            </File>
-          </Files>
         </Group>
       </Groups>
     </Target>

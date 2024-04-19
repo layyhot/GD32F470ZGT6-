@@ -67,7 +67,6 @@ Removing Unused input sections from the image.
 
     Removing timer.o(.rev16_text), (4 bytes).
     Removing timer.o(.revsh_text), (4 bytes).
-    Removing timer.o(i.Timer_1ms_Init), (2 bytes).
     Removing gd32f4xx_it.o(.rev16_text), (4 bytes).
     Removing gd32f4xx_it.o(.revsh_text), (4 bytes).
     Removing main.o(.rev16_text), (4 bytes).
@@ -145,7 +144,7 @@ Removing Unused input sections from the image.
     Removing bsp_led.o(i.led_off), (48 bytes).
     Removing bsp_led.o(i.led_on), (56 bytes).
 
-79 unused section(s) (total 4158 bytes) removed from the image.
+78 unused section(s) (total 4156 bytes) removed from the image.
 
 ==============================================================================
 
@@ -400,58 +399,58 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000001ac   Data   RO          850    RESET               startup_gd32f450_470.o
-    0x080001ac   0x080001ac   0x00000000   Code   RO          895  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080001ac   0x080001ac   0x00000004   Code   RO          898    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080001b0   0x080001b0   0x00000004   Code   RO          901    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001b4   0x080001b4   0x00000000   Code   RO          903    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001b4   0x080001b4   0x00000000   Code   RO          905    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001b4   0x080001b4   0x00000008   Code   RO          906    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001bc   0x080001bc   0x00000004   Code   RO          913    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x080001c0   0x080001c0   0x00000000   Code   RO          908    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x080001c0   0x080001c0   0x00000000   Code   RO          910    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x080001c0   0x080001c0   0x00000004   Code   RO          899    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x080001c4   0x080001c4   0x00000024   Code   RO          851    .text               startup_gd32f450_470.o
-    0x080001e8   0x080001e8   0x00000024   Code   RO          914    .text               mc_w.l(init.o)
-    0x0800020c   0x0800020c   0x00000004   Code   RO          145    i.BusFault_Handler  gd32f4xx_it.o
-    0x08000210   0x08000210   0x00000004   Code   RO          146    i.DebugMon_Handler  gd32f4xx_it.o
-    0x08000214   0x08000214   0x00000004   Code   RO          147    i.HardFault_Handler  gd32f4xx_it.o
-    0x08000218   0x08000218   0x00000004   Code   RO          148    i.MemManage_Handler  gd32f4xx_it.o
-    0x0800021c   0x0800021c   0x00000004   Code   RO          149    i.NMI_Handler       gd32f4xx_it.o
-    0x08000220   0x08000220   0x00000028   Code   RO          365    i.NVIC_SetPriority  systick.o
-    0x08000248   0x08000248   0x00000004   Code   RO          150    i.PendSV_Handler    gd32f4xx_it.o
-    0x0800024c   0x0800024c   0x00000004   Code   RO          151    i.SVC_Handler       gd32f4xx_it.o
-    0x08000250   0x08000250   0x00000008   Code   RO          152    i.SysTick_Handler   gd32f4xx_it.o
-    0x08000258   0x08000258   0x000000d4   Code   RO          809    i.SystemInit        system_gd32f4xx.o
-    0x0800032c   0x0800032c   0x00000004   Code   RO          153    i.UsageFault_Handler  gd32f4xx_it.o
-    0x08000330   0x08000330   0x0000000e   Code   RO          918    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800033e   0x0800033e   0x00000002   Code   RO          919    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000340   0x08000340   0x0000000e   Code   RO          920    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000000   0x08000000   0x000001ac   Data   RO          728    RESET               startup_gd32f450_470.o
+    0x080001ac   0x080001ac   0x00000000   Code   RO          773  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001ac   0x080001ac   0x00000004   Code   RO          776    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001b0   0x080001b0   0x00000004   Code   RO          779    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001b4   0x080001b4   0x00000000   Code   RO          781    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001b4   0x080001b4   0x00000000   Code   RO          783    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001b4   0x080001b4   0x00000008   Code   RO          784    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001bc   0x080001bc   0x00000004   Code   RO          791    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x080001c0   0x080001c0   0x00000000   Code   RO          786    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x080001c0   0x080001c0   0x00000000   Code   RO          788    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x080001c0   0x080001c0   0x00000004   Code   RO          777    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001c4   0x080001c4   0x00000024   Code   RO          729    .text               startup_gd32f450_470.o
+    0x080001e8   0x080001e8   0x00000024   Code   RO          792    .text               mc_w.l(init.o)
+    0x0800020c   0x0800020c   0x00000004   Code   RO          139    i.BusFault_Handler  gd32f4xx_it.o
+    0x08000210   0x08000210   0x00000004   Code   RO          140    i.DebugMon_Handler  gd32f4xx_it.o
+    0x08000214   0x08000214   0x00000004   Code   RO          141    i.HardFault_Handler  gd32f4xx_it.o
+    0x08000218   0x08000218   0x00000004   Code   RO          142    i.MemManage_Handler  gd32f4xx_it.o
+    0x0800021c   0x0800021c   0x00000004   Code   RO          143    i.NMI_Handler       gd32f4xx_it.o
+    0x08000220   0x08000220   0x00000028   Code   RO          243    i.NVIC_SetPriority  systick.o
+    0x08000248   0x08000248   0x00000004   Code   RO          144    i.PendSV_Handler    gd32f4xx_it.o
+    0x0800024c   0x0800024c   0x00000004   Code   RO          145    i.SVC_Handler       gd32f4xx_it.o
+    0x08000250   0x08000250   0x00000008   Code   RO          146    i.SysTick_Handler   gd32f4xx_it.o
+    0x08000258   0x08000258   0x000000d4   Code   RO          687    i.SystemInit        system_gd32f4xx.o
+    0x0800032c   0x0800032c   0x00000004   Code   RO          147    i.UsageFault_Handler  gd32f4xx_it.o
+    0x08000330   0x08000330   0x0000000e   Code   RO          796    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800033e   0x0800033e   0x00000002   Code   RO          797    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000340   0x08000340   0x0000000e   Code   RO          798    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0800034e   0x0800034e   0x00000002   PAD
-    0x08000350   0x08000350   0x00000014   Code   RO          366    i.delay_1ms         systick.o
-    0x08000364   0x08000364   0x00000018   Code   RO          367    i.delay_decrement   systick.o
-    0x0800037c   0x0800037c   0x00000004   Code   RO          411    i.gpio_bit_toggle   gd32f4xx_gpio.o
-    0x08000380   0x08000380   0x0000004e   Code   RO          416    i.gpio_mode_set     gd32f4xx_gpio.o
-    0x080003ce   0x080003ce   0x00000042   Code   RO          418    i.gpio_output_options_set  gd32f4xx_gpio.o
-    0x08000410   0x08000410   0x00000050   Code   RO          857    i.led_init          bsp_led.o
-    0x08000460   0x08000460   0x00000028   Code   RO          860    i.led_toggle        bsp_led.o
-    0x08000488   0x08000488   0x0000001a   Code   RO          332    i.main              main.o
+    0x08000350   0x08000350   0x00000014   Code   RO          244    i.delay_1ms         systick.o
+    0x08000364   0x08000364   0x00000018   Code   RO          245    i.delay_decrement   systick.o
+    0x0800037c   0x0800037c   0x00000004   Code   RO          289    i.gpio_bit_toggle   gd32f4xx_gpio.o
+    0x08000380   0x08000380   0x0000004e   Code   RO          294    i.gpio_mode_set     gd32f4xx_gpio.o
+    0x080003ce   0x080003ce   0x00000042   Code   RO          296    i.gpio_output_options_set  gd32f4xx_gpio.o
+    0x08000410   0x08000410   0x00000050   Code   RO          735    i.led_init          bsp_led.o
+    0x08000460   0x08000460   0x00000028   Code   RO          738    i.led_toggle        bsp_led.o
+    0x08000488   0x08000488   0x0000001a   Code   RO          216    i.main              main.o
     0x080004a2   0x080004a2   0x00000002   PAD
-    0x080004a4   0x080004a4   0x00000024   Code   RO          540    i.rcu_periph_clock_enable  gd32f4xx_rcu.o
-    0x080004c8   0x080004c8   0x00000108   Code   RO          810    i.system_clock_240m_25m_hxtal  system_gd32f4xx.o
-    0x080005d0   0x080005d0   0x00000008   Code   RO          811    i.system_clock_config  system_gd32f4xx.o
-    0x080005d8   0x080005d8   0x00000050   Code   RO          368    i.systick_config    systick.o
-    0x08000628   0x08000628   0x00000040   Data   RO          861    .constdata          bsp_led.o
-    0x08000668   0x08000668   0x00000020   Data   RO          916    Region$$Table       anon$$obj.o
+    0x080004a4   0x080004a4   0x00000024   Code   RO          418    i.rcu_periph_clock_enable  gd32f4xx_rcu.o
+    0x080004c8   0x080004c8   0x00000108   Code   RO          688    i.system_clock_240m_25m_hxtal  system_gd32f4xx.o
+    0x080005d0   0x080005d0   0x00000008   Code   RO          689    i.system_clock_config  system_gd32f4xx.o
+    0x080005d8   0x080005d8   0x00000050   Code   RO          246    i.systick_config    systick.o
+    0x08000628   0x08000628   0x00000040   Data   RO          739    .constdata          bsp_led.o
+    0x08000668   0x08000668   0x00000020   Data   RO          794    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000688, Size: 0x00000408, Max: 0x00070000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08000688   0x00000004   Data   RW          369    .data               systick.o
-    0x20000004   0x0800068c   0x00000004   Data   RW          812    .data               system_gd32f4xx.o
-    0x20000008        -       0x00000400   Zero   RW          848    STACK               startup_gd32f450_470.o
+    0x20000000   0x08000688   0x00000004   Data   RW          247    .data               systick.o
+    0x20000004   0x0800068c   0x00000004   Data   RW          690    .data               system_gd32f4xx.o
+    0x20000008        -       0x00000400   Zero   RW          726    STACK               startup_gd32f450_470.o
 
 
 ==============================================================================
@@ -461,18 +460,18 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       120         10         64          0          0       1708   bsp_led.o
-       148          0          0          0          0       2344   gd32f4xx_gpio.o
-        40          0          0          0          0      41866   gd32f4xx_it.o
-        36          4          0          0          0        606   gd32f4xx_rcu.o
+       120         10         64          0          0       1732   bsp_led.o
+       148          0          0          0          0       2360   gd32f4xx_gpio.o
+        40          0          0          0          0       4310   gd32f4xx_it.o
+        36          4          0          0          0        610   gd32f4xx_rcu.o
         26          0          0          0          0        491   main.o
-        36          8        428          0       1024        888   startup_gd32f450_470.o
-       484         32          0          4          0       2887   system_gd32f4xx.o
-       164         24          0          4          0      29006   systick.o
-         0          0          0          0          0       4532   timer.o
+        36          8        428          0       1024        892   startup_gd32f450_470.o
+       484         32          0          4          0       2915   system_gd32f4xx.o
+       164         24          0          4          0      29046   systick.o
+         0          0          0          0          0      42168   timer.o
 
     ----------------------------------------------------------------------
-      1056         78        524          8       1024      84328   Object Totals
+      1056         78        524          8       1024      84524   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          0          0          0          0   (incl. Padding)
 
@@ -512,8 +511,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1148         94        524          8       1024      82700   Grand Totals
-      1148         94        524          8       1024      82700   ELF Image Totals
+      1148         94        524          8       1024      82896   Grand Totals
+      1148         94        524          8       1024      82896   ELF Image Totals
       1148         94        524          8          0          0   ROM Totals
 
 ==============================================================================
