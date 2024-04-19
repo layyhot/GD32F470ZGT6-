@@ -42,3 +42,4 @@
 .\objects\main.o: E:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: ..\User\main.h
 .\objects\main.o: ..\Hardware\LED\bsp_led.h
+.\objects\main.o: ..\Hardware\bsp_pwm.h

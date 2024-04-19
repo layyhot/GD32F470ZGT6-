@@ -17,6 +17,14 @@ Section Cross References
     gd32f4xx_gpio.o(i.gpio_deinit) refers to gd32f4xx_rcu.o(i.rcu_periph_reset_disable) for rcu_periph_reset_disable
     gd32f4xx_rcu.o(i.rcu_deinit) refers to gd32f4xx_rcu.o(i.rcu_osci_stab_wait) for rcu_osci_stab_wait
     gd32f4xx_rcu.o(i.rcu_osci_stab_wait) refers to gd32f4xx_rcu.o(i.rcu_flag_get) for rcu_flag_get
+    gd32f4xx_timer.o(i.timer_deinit) refers to gd32f4xx_rcu.o(i.rcu_periph_reset_enable) for rcu_periph_reset_enable
+    gd32f4xx_timer.o(i.timer_deinit) refers to gd32f4xx_rcu.o(i.rcu_periph_reset_disable) for rcu_periph_reset_disable
+    gd32f4xx_timer.o(i.timer_external_clock_mode0_config) refers to gd32f4xx_timer.o(i.timer_external_trigger_config) for timer_external_trigger_config
+    gd32f4xx_timer.o(i.timer_external_clock_mode1_config) refers to gd32f4xx_timer.o(i.timer_external_trigger_config) for timer_external_trigger_config
+    gd32f4xx_timer.o(i.timer_external_trigger_as_external_clock_config) refers to gd32f4xx_timer.o(i.timer_input_trigger_source_select) for timer_input_trigger_source_select
+    gd32f4xx_timer.o(i.timer_input_capture_config) refers to gd32f4xx_timer.o(i.timer_channel_input_capture_prescaler_config) for timer_channel_input_capture_prescaler_config
+    gd32f4xx_timer.o(i.timer_input_pwm_capture_config) refers to gd32f4xx_timer.o(i.timer_channel_input_capture_prescaler_config) for timer_channel_input_capture_prescaler_config
+    gd32f4xx_timer.o(i.timer_internal_trigger_as_external_clock_config) refers to gd32f4xx_timer.o(i.timer_input_trigger_source_select) for timer_input_trigger_source_select
     system_gd32f4xx.o(i.SystemCoreClockUpdate) refers to system_gd32f4xx.o(.data) for SystemCoreClock
     system_gd32f4xx.o(i.SystemInit) refers to system_gd32f4xx.o(i.system_clock_config) for system_clock_config
     system_gd32f4xx.o(i.system_clock_config) refers to system_gd32f4xx.o(i.system_clock_240m_25m_hxtal) for system_clock_240m_25m_hxtal
@@ -43,6 +51,32 @@ Section Cross References
     bsp_led.o(i.led_on) refers to bsp_led.o(.constdata) for g_led_cfg
     bsp_led.o(i.led_toggle) refers to gd32f4xx_gpio.o(i.gpio_bit_toggle) for gpio_bit_toggle
     bsp_led.o(i.led_toggle) refers to bsp_led.o(.constdata) for g_led_cfg
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_rcu.o(i.rcu_periph_clock_enable) for rcu_periph_clock_enable
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_rcu.o(i.rcu_timer_clock_prescaler_config) for rcu_timer_clock_prescaler_config
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_timer.o(i.timer_deinit) for timer_deinit
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_timer.o(i.timer_init) for timer_init
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_timer.o(i.timer_channel_output_config) for timer_channel_output_config
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_timer.o(i.timer_channel_output_pulse_value_config) for timer_channel_output_pulse_value_config
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_timer.o(i.timer_channel_output_mode_config) for timer_channel_output_mode_config
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_timer.o(i.timer_channel_output_shadow_config) for timer_channel_output_shadow_config
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_timer.o(i.timer_auto_reload_shadow_enable) for timer_auto_reload_shadow_enable
+    bsp_pwm.o(i.pwm1_config) refers to gd32f4xx_timer.o(i.timer_enable) for timer_enable
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_rcu.o(i.rcu_periph_clock_enable) for rcu_periph_clock_enable
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_rcu.o(i.rcu_timer_clock_prescaler_config) for rcu_timer_clock_prescaler_config
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_timer.o(i.timer_deinit) for timer_deinit
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_timer.o(i.timer_init) for timer_init
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_timer.o(i.timer_channel_output_config) for timer_channel_output_config
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_timer.o(i.timer_channel_output_pulse_value_config) for timer_channel_output_pulse_value_config
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_timer.o(i.timer_channel_output_mode_config) for timer_channel_output_mode_config
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_timer.o(i.timer_channel_output_shadow_config) for timer_channel_output_shadow_config
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_timer.o(i.timer_auto_reload_shadow_enable) for timer_auto_reload_shadow_enable
+    bsp_pwm.o(i.pwm2_config) refers to gd32f4xx_timer.o(i.timer_enable) for timer_enable
+    motor.o(i.Motor_Init) refers to gd32f4xx_rcu.o(i.rcu_periph_clock_enable) for rcu_periph_clock_enable
+    motor.o(i.Motor_Init) refers to gd32f4xx_gpio.o(i.gpio_mode_set) for gpio_mode_set
+    motor.o(i.Motor_Init) refers to gd32f4xx_gpio.o(i.gpio_output_options_set) for gpio_output_options_set
+    motor.o(i.Motor_Init) refers to gd32f4xx_gpio.o(i.gpio_af_set) for gpio_af_set
+    motor.o(i.Motor_Init) refers to gd32f4xx_gpio.o(i.gpio_bit_write) for gpio_bit_write
+    motor.o(i.motor_LQ_front) refers to gd32f4xx_gpio.o(i.gpio_mode_set) for gpio_mode_set
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
@@ -73,6 +107,8 @@ Removing Unused input sections from the image.
     Removing main.o(.revsh_text), (4 bytes).
     Removing systick.o(.rev16_text), (4 bytes).
     Removing systick.o(.revsh_text), (4 bytes).
+    Removing sys.o(.rev16_text), (4 bytes).
+    Removing sys.o(.revsh_text), (4 bytes).
     Removing gd32f4xx_gpio.o(.rev16_text), (4 bytes).
     Removing gd32f4xx_gpio.o(.revsh_text), (4 bytes).
     Removing gd32f4xx_gpio.o(i.gpio_af_set), (94 bytes).
@@ -135,6 +171,80 @@ Removing Unused input sections from the image.
     Removing gd32f4xx_rcu.o(i.rcu_timer_clock_prescaler_config), (36 bytes).
     Removing gd32f4xx_rcu.o(i.rcu_tli_clock_div_config), (24 bytes).
     Removing gd32f4xx_rcu.o(i.rcu_voltage_key_unlock), (16 bytes).
+    Removing gd32f4xx_timer.o(.rev16_text), (4 bytes).
+    Removing gd32f4xx_timer.o(.revsh_text), (4 bytes).
+    Removing gd32f4xx_timer.o(i.timer_auto_reload_shadow_disable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_auto_reload_shadow_enable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_automatic_output_disable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_automatic_output_enable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_autoreload_value_config), (4 bytes).
+    Removing gd32f4xx_timer.o(i.timer_break_config), (30 bytes).
+    Removing gd32f4xx_timer.o(i.timer_break_disable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_break_enable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_break_struct_para_init), (18 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_capture_value_register_read), (42 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_complementary_output_polarity_config), (70 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_complementary_output_state_config), (70 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_control_shadow_config), (24 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_control_shadow_update_config), (26 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_dma_request_source_select), (26 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_input_capture_prescaler_config), (90 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_input_struct_para_init), (16 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_clear_config), (90 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_config), (492 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_fast_config), (90 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_mode_config), (90 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_polarity_config), (92 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_pulse_value_config), (38 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_shadow_config), (90 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_state_config), (92 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_output_struct_para_init), (16 bytes).
+    Removing gd32f4xx_timer.o(i.timer_channel_remap_config), (4 bytes).
+    Removing gd32f4xx_timer.o(i.timer_counter_alignment), (16 bytes).
+    Removing gd32f4xx_timer.o(i.timer_counter_down_direction), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_counter_read), (8 bytes).
+    Removing gd32f4xx_timer.o(i.timer_counter_up_direction), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_counter_value_config), (4 bytes).
+    Removing gd32f4xx_timer.o(i.timer_deinit), (388 bytes).
+    Removing gd32f4xx_timer.o(i.timer_disable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_dma_disable), (8 bytes).
+    Removing gd32f4xx_timer.o(i.timer_dma_enable), (8 bytes).
+    Removing gd32f4xx_timer.o(i.timer_dma_transfer_config), (24 bytes).
+    Removing gd32f4xx_timer.o(i.timer_enable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_event_software_generate), (8 bytes).
+    Removing gd32f4xx_timer.o(i.timer_external_clock_mode0_config), (40 bytes).
+    Removing gd32f4xx_timer.o(i.timer_external_clock_mode1_config), (32 bytes).
+    Removing gd32f4xx_timer.o(i.timer_external_clock_mode1_disable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_external_trigger_as_external_clock_config), (166 bytes).
+    Removing gd32f4xx_timer.o(i.timer_external_trigger_config), (30 bytes).
+    Removing gd32f4xx_timer.o(i.timer_flag_clear), (6 bytes).
+    Removing gd32f4xx_timer.o(i.timer_flag_get), (16 bytes).
+    Removing gd32f4xx_timer.o(i.timer_hall_mode_config), (26 bytes).
+    Removing gd32f4xx_timer.o(i.timer_init), (152 bytes).
+    Removing gd32f4xx_timer.o(i.timer_input_capture_config), (326 bytes).
+    Removing gd32f4xx_timer.o(i.timer_input_pwm_capture_config), (356 bytes).
+    Removing gd32f4xx_timer.o(i.timer_input_trigger_source_select), (16 bytes).
+    Removing gd32f4xx_timer.o(i.timer_internal_clock_config), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_internal_trigger_as_external_clock_config), (32 bytes).
+    Removing gd32f4xx_timer.o(i.timer_interrupt_disable), (8 bytes).
+    Removing gd32f4xx_timer.o(i.timer_interrupt_enable), (8 bytes).
+    Removing gd32f4xx_timer.o(i.timer_interrupt_flag_clear), (6 bytes).
+    Removing gd32f4xx_timer.o(i.timer_interrupt_flag_get), (24 bytes).
+    Removing gd32f4xx_timer.o(i.timer_master_output_trigger_source_select), (16 bytes).
+    Removing gd32f4xx_timer.o(i.timer_master_slave_mode_config), (26 bytes).
+    Removing gd32f4xx_timer.o(i.timer_output_value_selection_config), (34 bytes).
+    Removing gd32f4xx_timer.o(i.timer_prescaler_config), (14 bytes).
+    Removing gd32f4xx_timer.o(i.timer_prescaler_read), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_primary_output_config), (24 bytes).
+    Removing gd32f4xx_timer.o(i.timer_quadrature_decoder_mode_config), (64 bytes).
+    Removing gd32f4xx_timer.o(i.timer_repetition_value_config), (4 bytes).
+    Removing gd32f4xx_timer.o(i.timer_single_pulse_mode_config), (26 bytes).
+    Removing gd32f4xx_timer.o(i.timer_slave_mode_select), (16 bytes).
+    Removing gd32f4xx_timer.o(i.timer_struct_para_init), (22 bytes).
+    Removing gd32f4xx_timer.o(i.timer_update_event_disable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_update_event_enable), (10 bytes).
+    Removing gd32f4xx_timer.o(i.timer_update_source_config), (26 bytes).
+    Removing gd32f4xx_timer.o(i.timer_write_chxval_register_config), (34 bytes).
     Removing system_gd32f4xx.o(.rev16_text), (4 bytes).
     Removing system_gd32f4xx.o(.revsh_text), (4 bytes).
     Removing system_gd32f4xx.o(i.SystemCoreClockUpdate), (272 bytes).
@@ -143,8 +253,16 @@ Removing Unused input sections from the image.
     Removing bsp_led.o(.revsh_text), (4 bytes).
     Removing bsp_led.o(i.led_off), (48 bytes).
     Removing bsp_led.o(i.led_on), (56 bytes).
+    Removing bsp_pwm.o(.rev16_text), (4 bytes).
+    Removing bsp_pwm.o(.revsh_text), (4 bytes).
+    Removing bsp_pwm.o(i.pwm1_config), (280 bytes).
+    Removing bsp_pwm.o(i.pwm2_config), (264 bytes).
+    Removing motor.o(.rev16_text), (4 bytes).
+    Removing motor.o(.revsh_text), (4 bytes).
+    Removing motor.o(i.Motor_Init), (380 bytes).
+    Removing motor.o(i.motor_LQ_front), (32 bytes).
 
-78 unused section(s) (total 4156 bytes) removed from the image.
+162 unused section(s) (total 8818 bytes) removed from the image.
 
 ==============================================================================
 
@@ -154,37 +272,45 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ..\Firmware\CMSIS\GD\GD32F4xx\Source\ARM\startup_gd32f450_470.s 0x00000000   Number         0  startup_gd32f450_470.o ABSOLUTE
     ..\Firmware\CMSIS\GD\GD32F4xx\Source\system_gd32f4xx.c 0x00000000   Number         0  system_gd32f4xx.o ABSOLUTE
     ..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_gpio.c 0x00000000   Number         0  gd32f4xx_gpio.o ABSOLUTE
     ..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_rcu.c 0x00000000   Number         0  gd32f4xx_rcu.o ABSOLUTE
+    ..\Firmware\GD32F4xx_standard_peripheral\Source\gd32f4xx_timer.c 0x00000000   Number         0  gd32f4xx_timer.o ABSOLUTE
     ..\Hardware\LED\bsp_led.c                0x00000000   Number         0  bsp_led.o ABSOLUTE
+    ..\Hardware\bsp_pwm.c                    0x00000000   Number         0  bsp_pwm.o ABSOLUTE
+    ..\Hardware\motor.c                      0x00000000   Number         0  motor.o ABSOLUTE
     ..\Sys\timer.c                           0x00000000   Number         0  timer.o ABSOLUTE
     ..\User\gd32f4xx_it.c                    0x00000000   Number         0  gd32f4xx_it.o ABSOLUTE
     ..\User\main.c                           0x00000000   Number         0  main.o ABSOLUTE
+    ..\User\sys.c                            0x00000000   Number         0  sys.o ABSOLUTE
     ..\User\systick.c                        0x00000000   Number         0  systick.o ABSOLUTE
     ..\\Firmware\\CMSIS\\GD\\GD32F4xx\\Source\\system_gd32f4xx.c 0x00000000   Number         0  system_gd32f4xx.o ABSOLUTE
     ..\\Firmware\\GD32F4xx_standard_peripheral\\Source\\gd32f4xx_gpio.c 0x00000000   Number         0  gd32f4xx_gpio.o ABSOLUTE
     ..\\Firmware\\GD32F4xx_standard_peripheral\\Source\\gd32f4xx_rcu.c 0x00000000   Number         0  gd32f4xx_rcu.o ABSOLUTE
+    ..\\Firmware\\GD32F4xx_standard_peripheral\\Source\\gd32f4xx_timer.c 0x00000000   Number         0  gd32f4xx_timer.o ABSOLUTE
     ..\\Hardware\\LED\\bsp_led.c             0x00000000   Number         0  bsp_led.o ABSOLUTE
+    ..\\Hardware\\bsp_pwm.c                  0x00000000   Number         0  bsp_pwm.o ABSOLUTE
+    ..\\Hardware\\motor.c                    0x00000000   Number         0  motor.o ABSOLUTE
     ..\\Sys\\timer.c                         0x00000000   Number         0  timer.o ABSOLUTE
     ..\\User\\gd32f4xx_it.c                  0x00000000   Number         0  gd32f4xx_it.o ABSOLUTE
     ..\\User\\main.c                         0x00000000   Number         0  main.o ABSOLUTE
+    ..\\User\\sys.c                          0x00000000   Number         0  sys.o ABSOLUTE
     ..\\User\\systick.c                      0x00000000   Number         0  systick.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
@@ -399,58 +525,58 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000001ac   Data   RO          728    RESET               startup_gd32f450_470.o
-    0x080001ac   0x080001ac   0x00000000   Code   RO          773  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080001ac   0x080001ac   0x00000004   Code   RO          776    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080001b0   0x080001b0   0x00000004   Code   RO          779    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080001b4   0x080001b4   0x00000000   Code   RO          781    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080001b4   0x080001b4   0x00000000   Code   RO          783    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080001b4   0x080001b4   0x00000008   Code   RO          784    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080001bc   0x080001bc   0x00000004   Code   RO          791    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x080001c0   0x080001c0   0x00000000   Code   RO          786    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x080001c0   0x080001c0   0x00000000   Code   RO          788    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x080001c0   0x080001c0   0x00000004   Code   RO          777    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x080001c4   0x080001c4   0x00000024   Code   RO          729    .text               startup_gd32f450_470.o
-    0x080001e8   0x080001e8   0x00000024   Code   RO          792    .text               mc_w.l(init.o)
+    0x08000000   0x08000000   0x000001ac   Data   RO         1194    RESET               startup_gd32f450_470.o
+    0x080001ac   0x080001ac   0x00000000   Code   RO         1294  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080001ac   0x080001ac   0x00000004   Code   RO         1297    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080001b0   0x080001b0   0x00000004   Code   RO         1300    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080001b4   0x080001b4   0x00000000   Code   RO         1302    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080001b4   0x080001b4   0x00000000   Code   RO         1304    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080001b4   0x080001b4   0x00000008   Code   RO         1305    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080001bc   0x080001bc   0x00000004   Code   RO         1312    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x080001c0   0x080001c0   0x00000000   Code   RO         1307    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x080001c0   0x080001c0   0x00000000   Code   RO         1309    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x080001c0   0x080001c0   0x00000004   Code   RO         1298    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080001c4   0x080001c4   0x00000024   Code   RO         1195    .text               startup_gd32f450_470.o
+    0x080001e8   0x080001e8   0x00000024   Code   RO         1313    .text               mc_w.l(init.o)
     0x0800020c   0x0800020c   0x00000004   Code   RO          139    i.BusFault_Handler  gd32f4xx_it.o
     0x08000210   0x08000210   0x00000004   Code   RO          140    i.DebugMon_Handler  gd32f4xx_it.o
     0x08000214   0x08000214   0x00000004   Code   RO          141    i.HardFault_Handler  gd32f4xx_it.o
     0x08000218   0x08000218   0x00000004   Code   RO          142    i.MemManage_Handler  gd32f4xx_it.o
     0x0800021c   0x0800021c   0x00000004   Code   RO          143    i.NMI_Handler       gd32f4xx_it.o
-    0x08000220   0x08000220   0x00000028   Code   RO          243    i.NVIC_SetPriority  systick.o
+    0x08000220   0x08000220   0x00000028   Code   RO          246    i.NVIC_SetPriority  systick.o
     0x08000248   0x08000248   0x00000004   Code   RO          144    i.PendSV_Handler    gd32f4xx_it.o
     0x0800024c   0x0800024c   0x00000004   Code   RO          145    i.SVC_Handler       gd32f4xx_it.o
     0x08000250   0x08000250   0x00000008   Code   RO          146    i.SysTick_Handler   gd32f4xx_it.o
-    0x08000258   0x08000258   0x000000d4   Code   RO          687    i.SystemInit        system_gd32f4xx.o
+    0x08000258   0x08000258   0x000000d4   Code   RO         1153    i.SystemInit        system_gd32f4xx.o
     0x0800032c   0x0800032c   0x00000004   Code   RO          147    i.UsageFault_Handler  gd32f4xx_it.o
-    0x08000330   0x08000330   0x0000000e   Code   RO          796    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800033e   0x0800033e   0x00000002   Code   RO          797    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000340   0x08000340   0x0000000e   Code   RO          798    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000330   0x08000330   0x0000000e   Code   RO         1317    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800033e   0x0800033e   0x00000002   Code   RO         1318    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000340   0x08000340   0x0000000e   Code   RO         1319    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0800034e   0x0800034e   0x00000002   PAD
-    0x08000350   0x08000350   0x00000014   Code   RO          244    i.delay_1ms         systick.o
-    0x08000364   0x08000364   0x00000018   Code   RO          245    i.delay_decrement   systick.o
-    0x0800037c   0x0800037c   0x00000004   Code   RO          289    i.gpio_bit_toggle   gd32f4xx_gpio.o
-    0x08000380   0x08000380   0x0000004e   Code   RO          294    i.gpio_mode_set     gd32f4xx_gpio.o
-    0x080003ce   0x080003ce   0x00000042   Code   RO          296    i.gpio_output_options_set  gd32f4xx_gpio.o
-    0x08000410   0x08000410   0x00000050   Code   RO          735    i.led_init          bsp_led.o
-    0x08000460   0x08000460   0x00000028   Code   RO          738    i.led_toggle        bsp_led.o
+    0x08000350   0x08000350   0x00000014   Code   RO          247    i.delay_1ms         systick.o
+    0x08000364   0x08000364   0x00000018   Code   RO          248    i.delay_decrement   systick.o
+    0x0800037c   0x0800037c   0x00000004   Code   RO          309    i.gpio_bit_toggle   gd32f4xx_gpio.o
+    0x08000380   0x08000380   0x0000004e   Code   RO          314    i.gpio_mode_set     gd32f4xx_gpio.o
+    0x080003ce   0x080003ce   0x00000042   Code   RO          316    i.gpio_output_options_set  gd32f4xx_gpio.o
+    0x08000410   0x08000410   0x00000050   Code   RO         1201    i.led_init          bsp_led.o
+    0x08000460   0x08000460   0x00000028   Code   RO         1204    i.led_toggle        bsp_led.o
     0x08000488   0x08000488   0x0000001a   Code   RO          216    i.main              main.o
     0x080004a2   0x080004a2   0x00000002   PAD
-    0x080004a4   0x080004a4   0x00000024   Code   RO          418    i.rcu_periph_clock_enable  gd32f4xx_rcu.o
-    0x080004c8   0x080004c8   0x00000108   Code   RO          688    i.system_clock_240m_25m_hxtal  system_gd32f4xx.o
-    0x080005d0   0x080005d0   0x00000008   Code   RO          689    i.system_clock_config  system_gd32f4xx.o
-    0x080005d8   0x080005d8   0x00000050   Code   RO          246    i.systick_config    systick.o
-    0x08000628   0x08000628   0x00000040   Data   RO          739    .constdata          bsp_led.o
-    0x08000668   0x08000668   0x00000020   Data   RO          794    Region$$Table       anon$$obj.o
+    0x080004a4   0x080004a4   0x00000024   Code   RO          438    i.rcu_periph_clock_enable  gd32f4xx_rcu.o
+    0x080004c8   0x080004c8   0x00000108   Code   RO         1154    i.system_clock_240m_25m_hxtal  system_gd32f4xx.o
+    0x080005d0   0x080005d0   0x00000008   Code   RO         1155    i.system_clock_config  system_gd32f4xx.o
+    0x080005d8   0x080005d8   0x00000050   Code   RO          249    i.systick_config    systick.o
+    0x08000628   0x08000628   0x00000040   Data   RO         1205    .constdata          bsp_led.o
+    0x08000668   0x08000668   0x00000020   Data   RO         1315    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000688, Size: 0x00000408, Max: 0x00070000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08000688   0x00000004   Data   RW          247    .data               systick.o
-    0x20000004   0x0800068c   0x00000004   Data   RW          690    .data               system_gd32f4xx.o
-    0x20000008        -       0x00000400   Zero   RW          726    STACK               startup_gd32f450_470.o
+    0x20000000   0x08000688   0x00000004   Data   RW          250    .data               systick.o
+    0x20000004   0x0800068c   0x00000004   Data   RW         1156    .data               system_gd32f4xx.o
+    0x20000008        -       0x00000400   Zero   RW         1192    STACK               startup_gd32f450_470.o
 
 
 ==============================================================================

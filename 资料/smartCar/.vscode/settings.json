@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "bsp_led.h": "c",
+        "gd32f4xx.h": "c",
+        "main.h": "c",
+        "sys.h": "c",
+        "systick.h": "c",
+        "motor_pwm.h": "c",
+        "bsp_key.h": "c",
+        "motor.h": "c",
+        "bsp_usart.h": "c",
+        "gd32f4xx_adc.h": "c"
+    }
+}
