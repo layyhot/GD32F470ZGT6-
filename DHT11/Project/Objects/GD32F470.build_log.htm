@@ -1,0 +1,144 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 123 layy2101177@hotmail.com, 123, LIC=GE7DL-0L7LA-9ZCWW-Q72P0-SV4YI-UN15H
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.39.0.0
+Toolchain Path:  E:\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      CMSIS_AGDI.dll V1.33.16.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\编程\单片机\GD32智能小车\DHT11\Project\GD32F470.uvprojx
+Project File Date:  04/20/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\Keil5\ARM\ARMCC\Bin'
+Rebuild target 'Project'
+assembling startup_gd32f450_470.s...
+compiling DHT11.c...
+..\Hardware\DHT11.h(14): error:  #20: identifier "mode" is undefined
+  	mode
+..\Hardware\DHT11.h(15): error:  #65: expected a ";"
+      rcu_periph_enum clock;
+..\Hardware\DHT11.h(22): error:  #77-D: this declaration has no storage class or type specifier
+  GPIO_InitStructure.mode = GPIO_MODE;
+..\Hardware\DHT11.h(22): error:  #65: expected a ";"
+  GPIO_InitStructure.mode = GPIO_MODE;
+..\Hardware\DHT11.h(23): error:  #77-D: this declaration has no storage class or type specifier
+  GPIO_InitStructure.pin = DHT_GPIO_PIN;
+..\Hardware\DHT11.h(23): error:  #65: expected a ";"
+  GPIO_InitStructure.pin = DHT_GPIO_PIN;
+..\Hardware\DHT11.h(24): error:  #77-D: this declaration has no storage class or type specifier
+  GPIO_InitStructure.speed = GPIO_OSPEED_50MHZ;
+..\Hardware\DHT11.h(24): error:  #65: expected a ";"
+  GPIO_InitStructure.speed = GPIO_OSPEED_50MHZ;
+..\Hardware\DHT11.h(25): error:  #40: expected an identifier
+  gpio_init(DHT_GPIO_PORT, &GPIO_InitStructure);
+..\Hardware\DHT11.h(25): warning:  #77-D: this declaration has no storage class or type specifier
+  gpio_init(DHT_GPIO_PORT, &GPIO_InitStructure);
+..\Hardware\DHT11.h(25): error:  #92: identifier-list parameters may only be used in a function definition
+  gpio_init(DHT_GPIO_PORT, &GPIO_InitStructure);
+..\Hardware\DHT11.c(8): error:  #20: identifier "GPIOMode_TypeDef" is undefined
+  void DHT_GPIO_Init(GPIOMode_TypeDef Mode)
+..\Hardware\DHT11.c(12): warning:  #223-D: function "RCC_APB2PeriphClockCmd" declared implicitly
+  	RCC_APB2PeriphClockCmd(DHT_RCC_PORT,ENABLE);
+..\Hardware\DHT11.c(12): error:  #20: identifier "RCC_APB2Periph_GPIOA" is undefined
+  	RCC_APB2PeriphClockCmd(DHT_RCC_PORT,ENABLE);
+..\Hardware\DHT11.c(14): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+  	GPIO_SetBits(DHT_GPIO_PORT,DHT_GPIO_PIN);
+..\Hardware\DHT11.c(14): error:  #20: identifier "GPIO_Pin_4" is undefined
+  	GPIO_SetBits(DHT_GPIO_PORT,DHT_GPIO_PIN);
+..\Hardware\DHT11.c(16): error:  #136: struct "<unnamed>"  has no field "GPIO_Mode"
+  	GPIO_InitStructure.GPIO_Mode = Mode;
+..\Hardware\DHT11.c(17): error:  #136: struct "<unnamed>"  has no field "GPIO_Pin"
+  	GPIO_InitStructure.GPIO_Pin = DHT_GPIO_PIN;
+..\Hardware\DHT11.c(18): error:  #136: struct "<unnamed>"  has no field "GPIO_Speed"
+  	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+..\Hardware\DHT11.c(18): error:  #20: identifier "GPIO_Speed_50MHz" is undefined
+  	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+..\Hardware\DHT11.c(20): warning:  #223-D: function "GPIO_Init" declared implicitly
+  	GPIO_Init(DHT_GPIO_PORT,&GPIO_InitStructure);
+..\Hardware\DHT11.c(30): error:  #20: identifier "GPIO_Mode_Out_PP" is undefined
+  	DHT_GPIO_Init(GPIO_Mode_Out_PP);							//输出模式
+..\Hardware\DHT11.c(32): warning:  #223-D: function "GPIO_ResetBits" declared implicitly
+  	GPIO_ResetBits(DHT_GPIO_PORT,DHT_GPIO_PIN);		//输出20ms低电平后拉高
+..\Hardware\DHT11.c(32): error:  #20: identifier "GPIO_Pin_4" is undefined
+  	GPIO_ResetBits(DHT_GPIO_PORT,DHT_GPIO_PIN);		//输出20ms低电平后拉高
+..\Hardware\DHT11.c(34): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+  	GPIO_SetBits(DHT_GPIO_PORT,DHT_GPIO_PIN);
+..\Hardware\DHT11.c(36): error:  #20: identifier "GPIO_Mode_IN_FLOATING" is undefined
+  	DHT_GPIO_Init(GPIO_Mode_IN_FLOATING);					//输入模式
+..\Hardware\DHT11.c(39): warning:  #223-D: function "GPIO_ReadInputDataBit" declared implicitly
+  	if(!GPIO_ReadInputDataBit(DHT_GPIO_PORT,DHT_GPIO_PIN))
+..\Hardware\DHT11.c(56): error:  #29: expected an expression
+  	for(int i = 0; i < 8; i++)
+..\Hardware\DHT11.c(56): error:  #20: identifier "i" is undefined
+  	for(int i = 0; i < 8; i++)
+..\Hardware\DHT11.c(59): warning:  #223-D: function "GPIO_ReadInputDataBit" declared implicitly
+  		while(!GPIO_ReadInputDataBit(DHT_GPIO_PORT,DHT_GPIO_PIN));
+..\Hardware\DHT11.c(59): error:  #20: identifier "GPIO_Pin_4" is undefined
+  		while(!GPIO_ReadInputDataBit(DHT_GPIO_PORT,DHT_GPIO_PIN));
+..\Hardware\DHT11.c: 8 warnings, 23 errors
+compiling main.c...
+..\Hardware\dht11.h(14): error:  #20: identifier "mode" is undefined
+  	mode
+..\Hardware\dht11.h(15): error:  #65: expected a ";"
+      rcu_periph_enum clock;
+..\Hardware\dht11.h(22): error:  #77-D: this declaration has no storage class or type specifier
+  GPIO_InitStructure.mode = GPIO_MODE;
+..\Hardware\dht11.h(22): error:  #65: expected a ";"
+  GPIO_InitStructure.mode = GPIO_MODE;
+..\Hardware\dht11.h(23): error:  #77-D: this declaration has no storage class or type specifier
+  GPIO_InitStructure.pin = DHT_GPIO_PIN;
+..\Hardware\dht11.h(23): error:  #65: expected a ";"
+  GPIO_InitStructure.pin = DHT_GPIO_PIN;
+..\Hardware\dht11.h(24): error:  #77-D: this declaration has no storage class or type specifier
+  GPIO_InitStructure.speed = GPIO_OSPEED_50MHZ;
+..\Hardware\dht11.h(24): error:  #65: expected a ";"
+  GPIO_InitStructure.speed = GPIO_OSPEED_50MHZ;
+..\Hardware\dht11.h(25): error:  #40: expected an identifier
+  gpio_init(DHT_GPIO_PORT, &GPIO_InitStructure);
+..\Hardware\dht11.h(25): warning:  #77-D: this declaration has no storage class or type specifier
+  gpio_init(DHT_GPIO_PORT, &GPIO_InitStructure);
+..\Hardware\dht11.h(25): error:  #92: identifier-list parameters may only be used in a function definition
+  gpio_init(DHT_GPIO_PORT, &GPIO_InitStructure);
+..\User\main.c: 1 warning, 10 errors
+compiling gd32f4xx_it.c...
+compiling system_gd32f4xx.c...
+compiling systick.c...
+compiling bsp_led.c...
+compiling Delay.c...
+compiling gd32f4xx_gpio.c...
+compiling OLED.c...
+compiling gd32f4xx_rcu.c...
+".\Objects\GD32F470.axf" - 33 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: GigaDevice
+                https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F4xx_DFP.3.0.3.pack
+                GigaDevice::GD32F4xx_DFP@3.0.3
+                GigaDevice GD32F4xx Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  E:/Keil5/ARM/PACK/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
