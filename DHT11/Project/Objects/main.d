@@ -43,6 +43,6 @@
 .\objects\main.o: ..\User\main.h
 .\objects\main.o: ..\Hardware\LED\bsp_led.h
 .\objects\main.o: ..\Sys\Delay.h
-.\objects\main.o: ..\Hardware\OLED.h
 .\objects\main.o: ..\Hardware\dht11.h
 .\objects\main.o: E:\Keil5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\main.o: ..\Hardware\OLED.h

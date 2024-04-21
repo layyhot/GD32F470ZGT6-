@@ -1,7 +1,8 @@
 .\objects\oled.o: ..\Hardware\OLED.c
+.\objects\oled.o: ..\Hardware\OLED.h
+.\objects\oled.o: E:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\oled.o: ..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h
 .\objects\oled.o: ..\Firmware\CMSIS\core_cm4.h
-.\objects\oled.o: E:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\oled.o: ..\Firmware\CMSIS\core_cmInstr.h
 .\objects\oled.o: ..\Firmware\CMSIS\core_cmFunc.h
 .\objects\oled.o: ..\Firmware\CMSIS\core_cm4_simd.h
@@ -38,4 +39,5 @@
 .\objects\oled.o: ..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h
 .\objects\oled.o: ..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h
 .\objects\oled.o: ..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h
+.\objects\oled.o: ..\User\systick.h
 .\objects\oled.o: ..\Hardware\OLED_Font.h

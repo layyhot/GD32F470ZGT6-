@@ -1,5 +1,5 @@
 .\objects\dht11.o: ..\Hardware\DHT11.c
-.\objects\dht11.o: ..\Hardware\DHT11.h
+.\objects\dht11.o: ..\Hardware\dht11.h
 .\objects\dht11.o: ..\Firmware\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h
 .\objects\dht11.o: ..\Firmware\CMSIS\core_cm4.h
 .\objects\dht11.o: E:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h

@@ -1,31 +1,32 @@
-#include "gd32f4xx.h" 
+#include "OLED.h"
 #include "OLED_Font.h"
 
-/* 引脚配置 */
-#define OLED_W_SCL(x)    gpio_bit_write(GPIOB, GPIO_PIN_8, (bit_status)(x))
-#define OLED_W_SDA(x)    gpio_bit_write(GPIOB, GPIO_PIN_9, (bit_status)(x))
+///*引脚配置*/
+//#define OLED_W_SCL(x)		GPIO_WriteBit(GPIOB, GPIO_Pin_8, (BitAction)(x))
+//#define OLED_W_SDA(x)		GPIO_WriteBit(GPIOB, GPIO_Pin_9, (BitAction)(x))
 
-
-/* 引脚初始化 */
+/*引脚初始化*/
 void OLED_I2C_Init(void)
 {
-    
-    
-//    gpio_init(GPIOB, GPIO_MODE_OUT_OD, GPIO_OSPEED_50MHZ, GPIO_PIN_8);
-//    gpio_init(GPIOB, GPIO_MODE_OUT_OD, GPIO_OSPEED_50MHZ, GPIO_PIN_9);
-    
-	/* 使能时钟 */
-	rcu_periph_clock_enable(RCU_GPIOB);
-	/* 配置为输出模式 浮空模式 */
-	gpio_mode_set(GPIOB, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_8 | GPIO_PIN_9);
-	/* 配置为推挽输出 50MHZ */
-	gpio_output_options_set(GPIOB, GPIO_OTYPE_OD, GPIO_OSPEED_50MHZ, GPIO_PIN_8 | GPIO_PIN_9);
+	/* 使能引脚时钟 */
+	rcu_periph_clock_enable(RCU_SCL);
+	rcu_periph_clock_enable(RCU_SDA);
 
-    OLED_W_SCL(1);
-    OLED_W_SDA(1);
+	/* 配置SCL引脚复用IIC功能 */
+	gpio_af_set(PORT_SCL, GPIO_AF_4, GPIO_SCL);
+	/* 配置SDA引脚复用IIC功能 */
+	gpio_af_set(PORT_SDA, GPIO_AF_4, GPIO_SDA);
+	/* 配置SCL引脚 */
+	gpio_mode_set(PORT_SCL, GPIO_MODE_AF, GPIO_PUPD_PULLUP, GPIO_SCL);
+	gpio_output_options_set(PORT_SCL, GPIO_OTYPE_OD, GPIO_OSPEED_50MHZ, GPIO_SCL);
+
+	/* 配置SDA引脚 */
+	gpio_mode_set(PORT_SDA, GPIO_MODE_AF, GPIO_PUPD_PULLUP, GPIO_SDA);
+	gpio_output_options_set(PORT_SDA, GPIO_OTYPE_OD, GPIO_OSPEED_50MHZ, GPIO_SDA);
+	
+	OLED_W_SCL(1);
+	OLED_W_SDA(1);
 }
-
-/* 其余函数保持不变，根据需要继续使用 */
 
 /**
   * @brief  I2C开始

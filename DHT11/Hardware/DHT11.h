@@ -1,36 +1,25 @@
 #ifndef __DHT11_H
 #define __DHT11_H
 
-#include "gd32f4xx.h" 
+#include "gd32f4xx.h"
 #include "Delay.h"
 
-// 变量准备
-//char str[20];
 
+//// DHT11变量
+//char str[20];
 //uint8_t DHT_Buffer[5];
 
-typedef struct
-{
-  uint32_t GPIO_Pin;             /*!< Specifies the GPIO pins to be configured.
-                                      This parameter can be any value of @ref GPIO_pins_define */
 
-  uint32_t GPIO_Speed;  /*!< Specifies the speed for the selected pins.
-                                      This parameter can be a value of @ref GPIOSpeed_TypeDef */
+// 定义 DHT11 使用的 GPIO 端口和引脚
+#define DHT_GPIO_PORT       GPIOA
+#define DHT_GPIO_PIN        GPIO_PIN_4
+#define DHT_RCU_GPIOx       RCU_GPIOA
+#define DHT_RCC_PORT        RCU_APB2Periph_GPIOA
 
-  GPIOMode_TypeDef GPIO_Mode;    /*!< Specifies the operating mode for the selected pins.
-                                      This parameter can be a value of @ref GPIOMode_TypeDef */
-}GPIO_InitTypeDef;
-
-
-
-
-#define DHT_GPIO_PORT		GPIOA
-#define DHT_GPIO_PIN		GPIO_Pin_4
-#define DHT_RCC_PORT		RCC_APB2Periph_GPIOA
-
+// 函数声明
+void DHT_GPIO_Init(uint32_t gpio_periph, uint32_t pin, uint32_t mode);
+uint8_t DHT_Start(void);
+uint8_t DHT_Get_Byte_Data(void);
 uint8_t DHT_Get_Temp_Humi_Data(uint8_t buffer[]);
 
-#endif
-
-
-
+#endif /* __DHT11_H */

@@ -409,11 +409,6 @@
               <FileType>1</FileType>
               <FilePath>..\Sys\Delay.c</FilePath>
             </File>
-            <File>
-              <FileName>Delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Sys\Delay.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
