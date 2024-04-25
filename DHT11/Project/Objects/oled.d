@@ -40,4 +40,5 @@
 .\objects\oled.o: ..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h
 .\objects\oled.o: ..\Firmware\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h
 .\objects\oled.o: ..\User\systick.h
+.\objects\oled.o: ..\Sys\Delay.h
 .\objects\oled.o: ..\Hardware\OLED_Font.h

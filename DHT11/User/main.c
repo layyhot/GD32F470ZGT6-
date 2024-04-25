@@ -21,7 +21,8 @@ int main(void)
 
     while(1)
     {      
-		OLED_ShowString(1, 1, "Hello!");
+		OLED_ShowChar(2, 1, 5);
+//		OLED_ShowString(1, 1, "Hello!");
 		
 
     }
